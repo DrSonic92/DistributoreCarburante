@@ -10,13 +10,10 @@ public abstract class Distributore {
         this.euroPerLitro = euroPerLitro;
     }
 
-    public void rifornisci (double carburante){
-      deposito += carburante;
-    }
+    public  abstract void rifornisci (double carburante);
 
-    public void vendi (double carburante){
-        deposito -= carburante;
-    }
+
+    public abstract void vendi (double carburante);
 
     public double getDeposito() {
         return deposito;
