@@ -7,7 +7,7 @@ public class Main {
 distributore di carburante per automobili. Tale classe prevede due variabili
 d'istanza. La prima variabile d'istanza e' chiamata deposito
 e contiene il quantitativo di benzina disponibile al distributore. La seconda
-variabile d'istanza e' chiamata euroPerLitro e rappresenta
+variabile d'istanza e' chiamata euroPer Litro e rappresenta
 il prezzo della benzina, espresso in euro per litro.
 La quantita' iniziale di benzina disponibile e' zero. La
 classe deve inoltre implementare i seguenti metodi. Un metodo
