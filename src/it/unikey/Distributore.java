@@ -1,5 +1,32 @@
 package it.unikey;
 
-public class Distributore {
-    //perchè status non mostra differenze con la remote repo??
+public abstract class Distributore {
+
+    double deposito;
+    double euroPerLitro;
+
+    public Distributore(double euroPerLitro) {
+        this.deposito = 0;
+        this.euroPerLitro = euroPerLitro;
+    }
+
+    public void rifornisci (double carburante){
+      deposito += carburante;
+    }
+
+    public void vendi (double carburante){
+        deposito -= carburante;
+    }
+
+    public double getDeposito() {
+        return deposito;
+    }
+
+
+    public double getEuroPerLitro() {
+        return euroPerLitro;
+    }
+
+    public abstract void aggiorna(double euroPerLitro);
+
 }
