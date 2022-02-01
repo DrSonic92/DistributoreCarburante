@@ -3,13 +3,11 @@ package it.unikey;
 public class DistributoreDiesel extends Distributore{
 
     public DistributoreDiesel(double deposito, double euroPerLitro, String tipoCarburante) {
-
         super(deposito, euroPerLitro, tipoCarburante);
-
     }
-
     @Override
     public double getEuroPerLitro() {
+
         return super.getEuroPerLitro();
     }
 
@@ -17,7 +15,6 @@ public class DistributoreDiesel extends Distributore{
     public void rifornisci(double diesel) {
         deposito += diesel;
     }
-
 
     @Override
     public double vendi(double pagato,Auto auto) {
@@ -34,17 +31,13 @@ public class DistributoreDiesel extends Distributore{
 
         return  dieselVenduto;
     }
-
-
     @Override
     public void  aggiorna(double euroPerLitro) {
         this.setEuroPerLitro(euroPerLitro);
 
     }
-
     @Override
     public void depositoAttuale() {
         System.out.printf(" Nel deposito ci sono %6.2f litri\n", getDeposito());
     }
-
 }
