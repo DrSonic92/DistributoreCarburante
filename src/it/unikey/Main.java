@@ -23,25 +23,31 @@ esplicito nel modo appropriato (verde oppure gasolio).
 */
 
         Auto bmw = new Auto(65, 30,"benzina");
+        Auto audi = new Auto(70,20,"benzina");
+
         Distributore esso = new DistributoreBenzina(0,1.69,"benzina");
 
         esso.rifornisci(1000.0);
 
         //System.out.println("Nel deposito ci sono " + esso.deposito +" litri di benzina.");
-        System.out.printf("Hai comprato  %4.2f litri di benzina\n",esso.vendi(20,bmw));
+        esso.depositoAttuale();
 
-       // System.out.printf("%4.2f",bmw.getCarburanteAttuale() + "litri");
+        double benzinaVenduta = esso.vendi(20,bmw);
+        System.out.printf("Hai comprato  %4.2f litri di benzina\n",benzinaVenduta);
 
-        //System.out.printf("Ora nel deposito ci sono %6.2f litri di benzina\n",esso.deposito);
-        //System.out.println("Ora nel deposito ci sono " + esso.deposito +" litri di benzina.");
-
-        esso.aggiorna(1.80);
-
-        /*System.out.printf("%6.2f \n", esso.vendi(20,bmw));
-        System.out.printf("Ora nel deposito ci sono %6.2f litri di benzina\n ",esso.deposito);
-        System.out.println("Nel serbatoio auto ci sono %4.2f litri " + bmw.getCarburanteAttuale());*/
-
+        //System.out.printf("%4.2f litri\n",bmw.getCarburanteAttuale());
         bmw.Serbatoio();
+
+        esso.depositoAttuale();
+        //System.out.printf("Ora nel deposito ci sono %6.2f litri di benzina\n",esso.deposito);
+
+
+        esso.aggiorna(1.80);//cambio prezzo benza
+        benzinaVenduta = esso.vendi(20,audi);
+        System.out.printf("Hai comprato  %4.2f litri di benzina\n",benzinaVenduta);
+
+        audi.Serbatoio();
+        esso.depositoAttuale();
 
 
     }

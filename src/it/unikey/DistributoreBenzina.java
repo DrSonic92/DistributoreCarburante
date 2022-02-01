@@ -36,10 +36,16 @@ public class DistributoreBenzina extends Distributore{
         return  benzinaVenduta;
     }
 
+
     @Override
     public void  aggiorna(double euroPerLitro) {
         this.setEuroPerLitro(euroPerLitro);
 
+    }
+
+    @Override
+    public void depositoAttuale() {
+        System.out.printf(" Nel deposito ci sono %6.2f litri\n", getDeposito());
     }
 
 

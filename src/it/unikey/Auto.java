@@ -38,6 +38,6 @@ public class Auto {
     }
 
     public void Serbatoio(){
-        System.out.printf("%4.2f",getCarburanteAttuale()," litri");
+        System.out.printf("Nel serbatoio ci sono %4.2f litri\n",getCarburanteAttuale());
     }
 }

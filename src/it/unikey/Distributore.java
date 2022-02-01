@@ -47,6 +47,8 @@ public abstract class Distributore {
 
     public abstract void aggiorna(double euroPerLitro);
 
+    public abstract void depositoAttuale();
+
     //public abstract void alimentaAuto(double carburante, Auto auto);
 
 }
