@@ -4,6 +4,8 @@ public abstract class Distributore {
 
     double deposito;
     double euroPerLitro;
+    String tipoCarburante;
+
 
 
 
@@ -15,17 +17,24 @@ public abstract class Distributore {
         this.euroPerLitro = euroPerLitro;
     }
 
-    public Distributore(double deposito, double euroPerLitro) {
+    public Distributore(double deposito, double euroPerLitro, String tipoCarburante) {
         this.deposito = deposito;
         this.euroPerLitro = euroPerLitro;
+        this.tipoCarburante = tipoCarburante;
     }
 
+    public String getTipoCarburante() {
+        return tipoCarburante;
+    }
 
+    public void setTipoCarburante(String tipoCarburante) {
+        this.tipoCarburante = tipoCarburante;
+    }
 
     public  abstract void rifornisci (double carburante);
 
 
-    public abstract double vendi (double pagato, double euroPerLitro);
+    public abstract double vendi (double pagato, Auto auto);
 
     public double getDeposito() {
         return deposito;
@@ -37,6 +46,8 @@ public abstract class Distributore {
     }
 
     public abstract void aggiorna(double euroPerLitro);
+
+    //public abstract void alimentaAuto(double carburante, Auto auto);
 
 }
 

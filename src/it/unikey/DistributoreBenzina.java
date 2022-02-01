@@ -1,10 +1,17 @@
 package it.unikey;
 
+
+
 public class DistributoreBenzina extends Distributore{
-    public DistributoreBenzina(double deposito, double euroPerLitro) {
+    public DistributoreBenzina(double deposito, double euroPerLitro,String tipoCarburante) {
 
-        super(0, 1.89);
+        super(deposito,euroPerLitro,tipoCarburante);
 
+    }
+
+    @Override
+    public double getEuroPerLitro() {
+        return super.getEuroPerLitro();
     }
 
     @Override
@@ -12,17 +19,28 @@ public class DistributoreBenzina extends Distributore{
         deposito += benzina;
     }
 
-    @Override
-    public double vendi(double pagato, double euroPerLitro) {
-        double benzina = getDeposito();
 
-        double benzinaVenduta = pagato / euroPerLitro;
+    @Override
+    public double vendi(double pagato,Auto auto) {
+        double prezzo = getEuroPerLitro();
+        double benzina = getDeposito();
+        double benzinaVenduta = pagato / prezzo;
+
         benzina -= benzinaVenduta;
+        setDeposito(benzina);//modifico deposito
+
+        double serbatoio = auto.getCarburanteAttuale();
+        serbatoio += benzinaVenduta;
+        auto.setCarburanteAttuale(serbatoio);//modifico serbatoio auto
+
         return  benzinaVenduta;
     }
 
     @Override
-    public void aggiorna(double euroPerLitro) {
+    public void  aggiorna(double euroPerLitro) {
+        this.setEuroPerLitro(euroPerLitro);
 
     }
+
+
 }
