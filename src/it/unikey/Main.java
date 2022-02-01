@@ -22,6 +22,7 @@ public class Main {
         double benzinaVenduta = esso.vendi(20, bmw);
         double dieselVenduto = agip.vendi(50, alfa);
         System.out.printf("Hai comprato  %4.2f litri di benzina\n",benzinaVenduta);
+        System.out.printf("Hai comprato  %4.2f litri di diesel\n", dieselVenduto);
 
         //System.out.printf("%4.2f litri\n",bmw.getCarburanteAttuale());
         bmw.Serbatoio();
